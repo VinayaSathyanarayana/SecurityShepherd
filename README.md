@@ -2,8 +2,7 @@
 # OWASP Security Shepherd [![OWASP Flagship](https://img.shields.io/badge/owasp-flagship%20project-48A646.svg)](https://www.owasp.org/index.php/OWASP_Project_Inventory#tab=Flagship_Projects) 
 The [OWASP Security Shepherd Project](http://bit.ly/owaspSecurityShepherd) is a web and mobile application security training platform. Security Shepherd has been designed to foster and improve security awareness among a varied skill-set demographic. The aim of this project is to take AppSec novices or experienced engineers and sharpen their penetration testing skill set to security expert status.
 
-[![Build Status](https://travis-ci.com/OWASP/SecurityShepherd.svg?branch=dev)](https://travis-ci.com/OWASP/SecurityShepherd)
-  
+[![Build and Test](https://github.com/OWASP/SecurityShepherd/actions/workflows/test.yml/badge.svg)](https://github.com/OWASP/SecurityShepherd/actions/workflows/test.yml)  
 # Where can I download Security Shepherd?
 
 ### Virtual Machine or Manual Setup
@@ -14,7 +13,7 @@ You can download Security Shepherd VM's or Manual Installation Packs from [GitHu
 #### Initial Setup
 ```console
 # Install pre-reqs
-sudo apt install git maven docker docker-compose default-jdk
+sudo apt install git maven docker docker-compose openjdk-8-jdk
 
 # Clone the github repository
 git clone https://github.com/OWASP/SecurityShepherd.git
@@ -62,7 +61,7 @@ There are a lot of purposefully vulnerable applications available in the OWASP P
 * **Wide Topic Coverage**  
 Shepherd includes over sixty levels across the entire spectrum of Web and Mobile application security under a single project.
 * **Gentle Learning Curve**  
-Shepherd is a perfect for users completely new to security with levels increases in difficulty at a pleasant pace.
+Shepherd is a perfect for users completely new to security with levels increasing in difficulty at a pleasant pace.
 * **Layman Write Ups**  
 When each security concept is first presented in Shepherd, it is done so in layman terms so that anyone (even beginners) can absorb them.
 * **Real World Examples**  
@@ -70,13 +69,13 @@ The security risks in Shepherd are real vulnerabilities that have had their expl
 * **Scalability**  
 Shepherd can be used locally by a single user or easily as a server for a high amount of users.
 * **Highly Customisable**  
-Shepherd enables admins to set what levels are available to their users and in what way they are presentended (Open, CTF and Tournament Layouts)
+Shepherd enables admins to set what levels are available to their users and in what way they are presented (Open, CTF and Tournament Layouts)
 * **Perfect for Classrooms**  
 Shepherd gives it's players user specific solution keys to prevent students from sharing keys, rather than going through the steps required to complete a level.
 * **Scoreboard**  
 Security Shepherd has a configurable scoreboard to encourage a competitive learning environment. Users that complete levels first, second and third get medals on their scoreboard entry and bonus points to keep things entertaining on the scoreboard.
 * **User Management**  
-Security Shepherd admins can create users, create admins, suspend, unsuspend, add bonus points, or take penalty points away from user's accounts with the admin user management controls. Admins can also segment their students into specific class groups. Admins can view the progress a class has made to identify struggling participants. An admin can even close public registration and manually create users if they wish for a private experience.
+Security Shepherd admins can create users, create admins, suspend, unsuspend, add bonus points, or take penalty points away from users' accounts with the admin user management controls. Admins can also segment their students into specific class groups. Admins can view the progress a class has made to identify struggling participants. An admin can even close public registration and manually create users if they wish for a private experience.
 * **Robust Service**  
 Shepherd has been used to run online CTFs such as the OWASP Global CTF and OWASP LATAM Tour CTF 2015, both surpassing 200 active users and running with no down time, bar planned maintenance periods.
 * **Configurable Feedback**  

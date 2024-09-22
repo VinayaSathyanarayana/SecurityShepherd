@@ -1,4 +1,5 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" import="utils.*" errorPage="" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
+	language="java" import="utils.*" errorPage=""%>
 <%@ page import="java.util.Locale, java.util.ResourceBundle"%>
 <%
 /**
@@ -53,80 +54,97 @@ if (request.getSession() != null)
 %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Security Shepherd - <%= i18nLevelName %></title>
-	<link href="../css/lessonCss/theCss.css" rel="stylesheet" type="text/css" media="screen" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Security Shepherd - <%= i18nLevelName %></title>
+<link href="../css/lessonCss/theCss.css" rel="stylesheet"
+	type="text/css" media="screen" />
 
 </head>
 <body>
 	<script type="text/javascript" src="../js/jquery.js"></script>
-	<script type="text/javascript" src="../js/clipboard-js/clipboard.min.js"></script>
+	<script type="text/javascript"
+		src="../js/clipboard-js/clipboard.min.js"></script>
 	<script type="text/javascript" src="../js/clipboard-js/tooltips.js"></script>
-	<script type="text/javascript" src="../js/clipboard-js/clipboard-events.js"></script>
-		<div id="contentDiv">
-			<h2 class="title"><%= i18nLevelName %></h2>
-			<p>
-				<%= bundle.getString("challenge.description") %>
-				<br/>
-				<br/>
-				<h3><%= bundle.getString("challenge.description.h3") %></h3>
-				<%= bundle.getString("challenge.description.p1") %>
-				<%= bundle.getString("challenge.description.p2") %>
-				<br />
-				<br />
-				<form id="leForm" action="javascript:;">
-					<table>
-					<!-- Header -->
-					<tr>
-						<th><%= bundle.getString("challenge.form.picture") %></th>
-						<th><%= bundle.getString("challenge.form.cost") %></th>
-						<th><%= bundle.getString("challenge.form.quantity") %></th>
-					</tr>
-					<!-- Rage Row -->
-					<tr>
-						<td><img width="50px" height="50px" src="<%= levelHash %>/rage.png"/></td>
-						<td><%= bundle.getString("challenge.form.45") %></td>
-						<td><input type="text" style="width: 40px" value="0" id="numberOfRage" autocomplete="off"/>
-					</tr>
-					<!-- NotBad Row -->
-					<tr>
-						<td><img width="50px" height="50px" src="<%= levelHash %>/notbad.jpeg"/></td>
-						<td><%= bundle.getString("challenge.form.15") %></td>
-						<td><input type="text" style="width: 40px" value="0" id="numberOfNotBad" autocomplete="off"/>
-					</tr>
-					<!-- Troll Row -->
-					<tr>
-						<td><img width="50px" height="50px" src="<%= levelHash %>/troll.png"/></td>
-						<td><%= bundle.getString("challenge.form.3000") %></td>
-						<td><input type="text" style="width: 40px" value="0" id="numberOfTroll" autocomplete="off"/>
-					</tr>
-					<!-- MeGusta Row -->
-					<tr>
-						<td><img width="50px" height="50px" src="<%= levelHash %>/megusta.png"/></td>
-						<td><%= bundle.getString("challenge.form.30") %></td>
-						<td><input type="text" style="width: 40px" value="0" id="numberOfMegusta" autocomplete="off"/>
-					</tr>
-					</table>
-					<%= bundle.getString("challenge.form.pleaseSelect") %>
-					<table>
-					<tr><td><%= bundle.getString("challenge.form.couponCode") %>:</td><td><input type="text" id="couponCode" autocomplete="off"/></td></tr>
-					<tr><td colspons = 2>
+	<script type="text/javascript"
+		src="../js/clipboard-js/clipboard-events.js"></script>
+	<div id="contentDiv">
+		<h2 class="title"><%= i18nLevelName %></h2>
+		<p>
+			<%= bundle.getString("challenge.description") %>
+			<br /> <br />
+		<h3><%= bundle.getString("challenge.description.h3") %></h3>
+		<%= bundle.getString("challenge.description.p1") %>
+		<%= bundle.getString("challenge.description.p2") %>
+		<br /> <br />
+		<form id="leForm" action="javascript:;">
+			<table>
+				<!-- Header -->
+				<tr>
+					<th><%= bundle.getString("challenge.form.picture") %></th>
+					<th><%= bundle.getString("challenge.form.cost") %></th>
+					<th><%= bundle.getString("challenge.form.quantity") %></th>
+				</tr>
+				<!-- Apple Row -->
+				<tr>
+					<td><img width="50px" height="50px"
+						src="<%= levelHash %>/apple.jpg" /></td>
+					<td><%= bundle.getString("challenge.form.45") %></td>
+					<td><input type="text" style="width: 50px" value="0"
+						id="numberOfApples" autocomplete="off" />
+				</tr>
+				<!-- Banana Row -->
+				<tr>
+					<td><img width="50px" height="50px"
+						src="<%= levelHash %>/banana.jpg" /></td>
+					<td><%= bundle.getString("challenge.form.15") %></td>
+					<td><input type="text" style="width: 50px" value="0"
+						id="numberOfBananas" autocomplete="off" />
+				</tr>
+				<!-- Orange Row -->
+				<tr>
+					<td><img width="50px" height="50px"
+						src="<%= levelHash %>/orange.jpg" /></td>
+					<td><%= bundle.getString("challenge.form.3000") %></td>
+					<td><input type="text" style="width: 50px" value="0"
+						id="numberOfOranges" autocomplete="off" />
+				</tr>
+				<!-- Pineapple Row -->
+				<tr>
+					<td><img width="50px" height="50px"
+						src="<%= levelHash %>/pineapple.png" /></td>
+					<td><%= bundle.getString("challenge.form.30") %></td>
+					<td><input type="text" style="width: 50px" value="0"
+						id="numberOfPineapples" autocomplete="off" />
+				</tr>
+			</table>
+			<%= bundle.getString("challenge.form.pleaseSelect") %>
+			<table>
+				<tr>
+					<td><%= bundle.getString("challenge.form.couponCode") %>:</td>
+					<td><input type="text" id="couponCode" autocomplete="off" /></td>
+				</tr>
+				<tr>
+					<td colspons=2>
 						<div id="submitButton">
-						<input type="submit" value="<%= bundle.getString("challenge.form.button.value") %>"/></div>
-						<p style="display: none;" id="loadingSign"><%= bundle.getString("sign.loading") %>...</p>
-					</td></tr>
-					</table>
-				</form>
+							<input type="submit"
+								value="<%= bundle.getString("challenge.form.button.value") %>" />
+						</div>
+						<p style="display: none;" id="loadingSign"><%= bundle.getString("sign.loading") %>...
+						</p>
+					</td>
+				</tr>
+			</table>
+		</form>
 
-				<div id="resultsDiv"></div>
-			</p>
-		</div>
-		<script>
+		<div id="resultsDiv"></div>
+		</p>
+	</div>
+	<script>
 			$("#leForm").submit(function(){
-				var theMegustaAmount = $("#numberOfMegusta").val();
-				var theTrollAmount = $("#numberOfTroll").val();
-				var theRageAmount = $("#numberOfRage").val();
-				var theNotBadAmount = $("#numberOfNotBad").val();
+				var thePineappleAmount = $("#numberOfPineapples").val();
+				var theOrangeAmount = $("#numberOfOranges").val();
+				var theAppleAmount = $("#numberOfApples").val();
+				var theBananaAmount = $("#numberOfBananas").val();
 				var theCouponCode = $("#couponCode").val();
 				$("#submitButton").hide("fast");
 				$("#loadingSign").show("slow");
@@ -135,10 +153,10 @@ if (request.getSession() != null)
 						type: "POST",
 						url: "<%= levelHash %>",
 						data: {
-							megustaAmount: theMegustaAmount,
-							trollAmount: theTrollAmount,
-							rageAmount: theRageAmount,
-							notBadAmount: theNotBadAmount,
+							pineappleAmount: thePineappleAmount, 
+							orangeAmount: theOrangeAmount,
+							appleAmount: theAppleAmount, 
+							bananaAmount: theBananaAmount,
 							couponCode: theCouponCode
 						},
 						async: false
@@ -159,8 +177,9 @@ if (request.getSession() != null)
 				});
 			});
 		</script>
-		<script src="<%= levelHash %>/couponCheck.js"></script>
-		<% if(Analytics.googleAnalyticsOn) { %><%= Analytics.googleAnalyticsScript %><% } %>
+	<script src="<%= levelHash %>/couponCheck.js"></script>
+	<% if(Analytics.googleAnalyticsOn) { %><%= Analytics.googleAnalyticsScript %>
+	<% } %>
 </body>
 </html>
 <%
